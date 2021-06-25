@@ -1,0 +1,135 @@
+{% extends 'miUsuario/base.html' %}
+{% load static %}
+
+{% block content %}
+{% if user.is_authenticated %}
+		<!-- Portfolio Section-->
+		<section class="page-section portfolio" id="portfolio">
+				<br><br><br>
+			<h3 class="page-section-heading text-center text-uppercase text-primary mb-0">mi usuario</h3>
+				<br><br>
+
+					<div class="container d-flex flex-column">
+							<div class="container bootstrap snippets bootdey">
+							<div class="panel-body inf-content">
+									<div class="row">
+											<div class="col-md-4">
+													<img alt="" style="width:600px;" title="" class="img-circle img-thumbnail isTooltip" src="https://media.vlpt.us/images/lee-dongha/post/5d31525a-f08c-43e7-959c-31805b38e4f0/Chrome-Broken-Image-Icon.png" data-original-title="Usuario"> 
+													<ul title="Ratings" class="list-inline ratings text-center">
+															<li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+															<li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+															<li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+															<li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+															<li><a href="#"><span class="glyphicon glyphicon-star"></span></a></li>
+													</ul>
+											</div>
+											<div class="col-md-6">
+												<br><br>
+													<strong>Information</strong><br>
+													<div class="table-responsive">
+													<table class="table table-user-information">
+															<tbody>
+																	<tr>    
+																			<td>
+																					<strong>
+																							<span class="glyphicon glyphicon-user  text-primary"></span>    
+																							Name                                                
+																					</strong>
+																			</td>
+																			<td class="text-primary">
+																					{{user.first_name}}    
+																			</td>
+																	</tr>
+																	<tr>        
+																			<td>
+																					<strong>
+																							<span class="glyphicon glyphicon-cloud text-primary"></span>  
+																							Lastname                                                
+																					</strong>
+																			</td>
+																			<td class="text-primary">
+																					{{user.last_name}}  
+																			</td>
+																	</tr>
+
+																	<tr>        
+																			<td>
+																					<strong>
+																							<span class="glyphicon glyphicon-bookmark text-primary"></span> 
+																							Username                                                
+																					</strong>
+																			</td>
+																			<td class="text-primary">
+																				{{user.username}} 
+																			</td>
+																	</tr>
+
+
+																	<tr>        
+																			<td>
+																					<strong>
+																							<span class="glyphicon glyphicon-eye-open text-primary"></span> 
+																							Role                                                
+																					</strong>
+																			</td>
+																			<td class="text-primary">
+																					{{user.groups.all.0}}
+																			</td>
+																	</tr>
+																	<tr>        
+																			<td>
+																					<strong>
+																							<span class="glyphicon glyphicon-envelope text-primary"></span> 
+																							Email                                                
+																					</strong>
+																			</td>
+																			<td class="text-primary">
+																				{{user.email}}  
+																			</td>
+																	</tr>                                   
+															</tbody>
+													</table>
+													</div>
+												</br>
+											</div>
+									</div>
+							</div>
+							</div>    
+					</div>
+
+		</br>
+
+		<table class="table table-striped table-responsive-md btn-table">
+
+		<thead>
+			<tr>
+			<th>#</th>
+			<th>Entrevistador</th>
+			<th>Empresa</th>
+			<th>Hora</th>
+			<th>Videollamada</th>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+			<td> 1</td>
+			<td>Diego Perez</td>
+			<td>Empresa 1</td>
+			<td>15:00</td>
+			<td>
+				<a class="btn btn-primary" href="/videollamada/">Ingresar</a>
+			</td>
+			</tr>
+
+		</tbody>
+
+		</table>
+
+		</section>
+
+{% else %}
+      
+<meta http-equiv="refresh" content="0; URL=/signin" />
+{% endif %}
+{% endblock %}  

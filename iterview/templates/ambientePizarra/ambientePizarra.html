@@ -1,0 +1,78 @@
+{% extends 'ambientePizarra/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Masthead-->  
+    <body class="masthead bg-primary text-white text-center" style="height: 100%;">
+    <div class="container d-flex align-items-center flex-column">
+        <h1 class="masthead-heading text mb-0">Ambiente de Pizarra</h1>
+        <div>
+            <button onclick="exportar()">Descargar imagen</button>
+            <button onclick="limpiar()">Clear</button>
+            <button onclick="lapiz()" id="tool-pencil">Lapiz</button>
+            <button onclick="goma()" id='tool-eraser'>Borrar</button>
+            <button onclick="cuadrado()" id="tool-rectangle">Cuadrado</button>
+            <button onclick="texto()" id="tool-text">Texto</button>
+        </div>
+    </div>
+    <a id="exporta"></a>
+    <div class="my-drawing" style="width: 70%;height: 80%;margin: auto;border: 20px; border-style: double;border-color: black;margin-top: 5px;margin-bottom: 10px;">
+    </div>
+    
+    <!-- kick it off -->
+    <script>
+        var lc = LC.init(document.getElementsByClassName('my-drawing')[0],{
+            imageURLPrefix: '/static/img',
+            tools: LC.defaultTools,
+            backgroundColor: 'white'
+        });
+        function exportar(){
+            var link = document.getElementById('exporta');
+            link.setAttribute('download', 'Pizarra.png');
+            link.setAttribute('href', lc.getImage().toDataURL("image/png").replace("image/png", "image/octet-stream"));
+            link.click();
+        }
+        var tools = [
+            {
+                name: 'pencil',
+                el: document.getElementById('tool-pencil'),
+                tool: new LC.tools.Pencil(lc)
+            },
+            {
+                name: 'eraser',
+                el: document.getElementById('tool-eraser'),
+                tool: new LC.tools.Eraser(lc)
+            },
+            {
+                name: 'rectangle',
+                el: document.getElementById('tool-rectangle'),
+                tool: new LC.tools.Rectangle(lc)
+            },
+            {
+                name: 'text',
+                el: document.getElementById('tool-text'),
+                tool: new LC.tools.Text(lc)
+            }
+        ];
+        var activateTool = function(t){
+            lc.setTool(t.tool);
+        }
+        function lapiz(){
+            activateTool(tools[0]);
+        }
+        function goma(){
+            activateTool(tools[1]);
+        }
+        function cuadrado(){
+            activateTool(tools[2]);
+        }
+        function texto(){
+            activateTool(tools[3]);
+        }             
+        function limpiar(){
+            lc.clear();
+        }
+    </script>
+  </body>
+
+{% endblock %}

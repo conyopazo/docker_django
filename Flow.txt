@@ -1,0 +1,16 @@
+objetivos del dia:
+home page= inicio
+inicio sesión entrevistado
+inicio sesión entrevistador
+crear usuario
+	Agregar boton a navbar
+	dentro de sign in agregar drop down para elegir si es entrevistado o entrevistador
+agenda (carpeta)
+myUser
+interfaz videollamada (carpeta)
+  ambiente de programacion(carpeta)
+  ambiente pizarra(carpeta)
+
+	# python manage.py startapp "nombre carpeta" #
+	nombre: admin
+	Contraseña: programacionprofesional

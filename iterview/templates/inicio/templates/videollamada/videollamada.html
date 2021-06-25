@@ -1,0 +1,25 @@
+{% extends 'videollamada/base.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Masthead-->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text mb-0">Videollamada</h1>
+            <!-- Icon Divider-->
+						<br>
+            	<img src={% static "assets/img/generic_call.jpg" %} alt="llamada generica">
+            <!-- Masthead Subheading-->
+						</br>
+            <!-- Masthead Buttons-->
+            <div class="masthead-heading d-grid gap-2 d-md-block">
+                <a class="btn btn-outline-light btn-lg" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO" role="button" >Chat</a>
+                <a class="btn btn-outline-light btn-lg" href="https://www.youtube.com/watch?v=ZZ5LpwO-An4&ab_channel=ProtoOfSnagem" role="button" >Ambiente de Programación</a>
+                <a class="btn btn-outline-light btn-lg" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstleyVEVO" role="button" >Ambiente de Pizarra</a>
+
+            </div>
+        </div>
+    </header>
+
+{% endblock %}

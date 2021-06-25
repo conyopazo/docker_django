@@ -1,0 +1,37 @@
+{% extends 'miUsuarioEntrevistador/base.html' %}
+{% load static %}
+{% block content %}
+<!doctype html>
+<body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="mx-auto">
+<div class="row">
+	<div class="col-md-6">
+		<div class="card card-body">
+
+
+			<p>¿Seguro que quieres eliminar "{{item}}" ?</p>
+
+			<form method="POST">
+				
+				{% csrf_token %}
+				<a class="btn btn-warning" href="{% url 'agenda' %}">Cancelar</a>
+				<input class="btn btn-danger" type="submit" name="Confirm"> 
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+<br>
+<br>
+<br>
+</body>
+</html>
+
+{% endblock %}
