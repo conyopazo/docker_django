@@ -1,17 +1,24 @@
-
-
-## Proyecto epico Programacion Profesional
+# Proyecto épico Programacion Profesional
 
   
-Requisitos: Python3, Django (minimo v3.1.5)
-```
+Requisitos: docker desktop
 
-Hasta ahora la plataforma se basa en: Inicio, Registrar Postulante, Registrar Entrevistador, Sign In, videollamada, Agenda, miusuario, ambiente programacion, ambiente ambientePizarra y una sección admin
+## Instrucciones de uso:
+
+Para poder correr la página se debe instalar docker desktop. A continuación en el [link] (https://github.com/conyopazo/docker_django) se encontrará la carpeta docker_django con todos los archivos requeridos. Luego en el terminal usar el siguiente comando para hacer correr los archivos en el docker:
+```
+docker compose up --build
+```
+## Espacios de la página:
+
+```
+Nuestra página cuenta con: Inicio, Espacio de Registro (Entrevistador y postulante), Espacio de LogIn, Ambiente del usuario, Ambiente de Video llamada (que incluye pizarra y ambiente de programación), Agenda del usuario y Admin.
+
 
 ```
 
 links relevantes:
- 
+```
 /miusuario
 /miusuario_entrevistador
 /agenda
@@ -19,10 +26,15 @@ links relevantes:
 /ambientepizzara
 /ambienteprogramacion
 /admin
+```
+## Creditos ##
+Track 1, Sección 1: Programación profesional
 
-**Creditos**
--Felipe Cornejo
--Andres Hernandez
--Martin Roca
--Allan Sifri
--Matias Vidal
+
+```
+if (Estado == "Conforme"):
+  print("Disfrute de la aplicación")
+else:
+ print("Para más información acceder a los Readme especificos")
+
+```
