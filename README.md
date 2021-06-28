@@ -11,10 +11,10 @@ docker compose up --build
 ```
 Al momento de entrar a la aplicación puede registrarse como postulante o entrevistador, es importante que siga las siguientes intrucciones:
 
-* Your password can’t be too similar to your other personal information.
-* Your password must contain at least 8 characters.
-* Your password can’t be a commonly used password.
-* Your password can’t be entirely numeric.
+* Su contraseña no puede ser similar a otra de su información personal
+* Su contraseña debe contener al menos 8 caracteres.
+* Su contraseña no puede ser una contraseña usualmente utilizada.
+* Su contraseña no puede ser conpletamente númerica.
 
 ## Espacios de la página:
 
