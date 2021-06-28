@@ -16,7 +16,7 @@
             <div id="meet">
             </div>
 
-            <a id= "videollamada" class="btn btn-outline-light btn-lg" role="button" onclick="initJitsi();" onclick="ocultar('videollamada');">Iniciar videollamada</a>
+            <a id= "v1" class="btn btn-outline-light btn-lg" role="button" onclick="initJitsi();OcultarButton(this);">Iniciar videollamada</a>
             <p></p>
             <p></p>
              <!-- Masthead Buttons-->
@@ -82,9 +82,9 @@ function initJitsi() {
     window.japi = new JitsiMeetExternalAPI(domain, options);
   }
 
-function ocultar(id){
-    var elemento = document.getElementById(id);
-    elemento.style.display = "none";
+function OcultarButton(btn)
+{
+    $(btn).fadeOut();
 }
   window.japi.executeCommands({
                 displayName: ['nickname'],
