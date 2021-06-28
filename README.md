@@ -9,6 +9,13 @@ Para poder correr la página se debe instalar docker desktop. A continuación en
 ```
 docker compose up --build
 ```
+Al momento de entrar a la aplicación puede registrarse como postulante o entrevistador, es importante que siga las siguientes intrucciones:
+```
+*Your password can’t be too similar to your other personal information.
+*Your password must contain at least 8 characters.
+*Your password can’t be a commonly used password.
+*Your password can’t be entirely numeric.
+```
 ## Espacios de la página:
 
 ```
