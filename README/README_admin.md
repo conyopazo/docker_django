@@ -5,7 +5,7 @@
 En el caso de admin solamente se va a poder acceder agregando /admin al link, posteriormente se debe iniciar sesión con una cuenta de administrador, los datos de esta cuenta serían:
 ```
 Usuario: admin
-Contraseña: programacionprofesional
+Contraseña: admin
 ```
 
 De esta manera tenemos acceso **TOTAL** a la base de datos y podemos modificar las cosas que necesitemos o debamos. 
