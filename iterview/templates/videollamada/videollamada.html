@@ -16,7 +16,7 @@
             <div id="meet">
             </div>
 
-            <a id= "v1" class="btn btn-outline-light btn-lg" role="button" onclick="initJitsi();OcultarButton(this);">Iniciar videollamada</a>
+            <a id= "videollamada" class="btn btn-outline-light btn-lg" role="button" onclick="initJitsi();" onclick="ocultar('videollamada');">Iniciar videollamada</a>
             <p></p>
             <p></p>
              <!-- Masthead Buttons-->
@@ -44,8 +44,8 @@
                   </div></div>
               </div>
                 <!--<a class="btn btn-outline-light btn-lg" role="button" onclick=<script src=window.open("/ambienteprogramacion")></script> Ambiente de Programación</a>-->
-                <a class="btn btn-outline-light btn-lg" role="button" onclick=<button type="button" href="/ambienteprogramacion" class="btn btn-success">Ambiente de Programación</button></a>
-                <a class="btn btn-outline-light btn-lg" role="button" onclick=<button type="button" href="/ambientepizarra" class="btn btn-success">Ambiente de Pizarra</button></a>
+                <a class="btn btn-outline-light btn-lg" role="button" onclick=<button type="button" href="/ambienteprogramacion" target="_blank" class="btn btn-success">Ambiente de Programación</button></a>
+                <a class="btn btn-outline-light btn-lg" role="button" onclick=<button type="button" href="/ambientepizarra" target="_blank" class="btn btn-success">Ambiente de Pizarra</button></a>
                 <!--<a class="btn btn-outline-light btn-lg" role="button" onclick=<script src=window.open("/ambientepizarra")></script> Ambiente de Pizarra</a>-->
                 <br></br>
                 <h4 for="floatingTextarea2">Escriba la nota y un feedback</h4>
@@ -82,9 +82,9 @@ function initJitsi() {
     window.japi = new JitsiMeetExternalAPI(domain, options);
   }
 
-function OcultarButton(btn)
-{
-    $(btn).fadeOut();
+function ocultar(id){
+    var elemento = document.getElementById(id);
+    elemento.style.display = "none";
 }
   window.japi.executeCommands({
                 displayName: ['nickname'],
