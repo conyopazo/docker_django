@@ -35,6 +35,6 @@ Track 1, Sección 1: Programación profesional
 if (Estado == "Conforme"):
   print("Disfrute de la aplicación")
 else:
- print("Para más información acceder a los Readme especificos")
+ print("Para más información acceder a los Readme específicos")
 
 ```
