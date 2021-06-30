@@ -8,4 +8,4 @@ COPY . /code/
 
 RUN pip install -r requirements.txt
 
-CMD [ "gunicorn", "-c", "config/gunicorn/conf.py", "--bind", ":8000", "--chdir", "mysite", "mysite.wsgi:application"]
+CMD [ "gunicorn", "-c", "config/gunicorn/conf.py", "--bind", ":8000",":5432", "--chdir", "mysite", "mysite.wsgi:application"]
